@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware('guest:admin');
+})->middleware(['guest:admin']);
 
 Route::prefix('cms')->middleware(['auth', 'verified'])->group(function () {
     //dashboard
