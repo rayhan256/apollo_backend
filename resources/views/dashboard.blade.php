@@ -47,15 +47,21 @@ $user = Auth::user();
                                                     @csrf
                                                     <button type="submit" rel="tooltip" title=""
                                                         class="btn btn-primary btn-round btn-icon btn-icon-mini btn-neutral"
-                                                        data-original-title="Update">
+                                                        data-original-title="Update"
+                                                        {{ $task->user->name != $user->name ? 'disabled' : '' }}>
                                                         <i class="now-ui-icons ui-1_check"></i>
                                                     </button>
                                                 </form>
-                                                <a href="/cms/deleteTask/{{ $task->id }}"
-                                                    class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral"
-                                                    data-original-title="Remove">
-                                                    <i class="now-ui-icons ui-1_simple-remove"></i>
-                                                </a>
+                                                @if ($task->user->name != $user->name)
+                                                    <div></div>
+                                                @else
+                                                    <a href="/cms/deleteTask/{{ $task->id }}"
+                                                        class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral"
+                                                        data-original-title="Remove" aria-disabled="true">
+                                                        <i class="now-ui-icons ui-1_simple-remove"></i>
+                                                    </a>
+                                                @endif
+
                                             </td>
                                         </tr>
                                     @endforeach
