@@ -12,12 +12,14 @@
 <!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
 <script src="{{ asset('/assets/demo/demo.js') }}"></script>
 <script src="{{ asset('/tagsinput/bootstrap-tagsinput.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.tiny.cloud/1/vkg9qm33hdnpip24nh95a4y6z0xiufpig50atl7ngmwv4p2x/tinymce/5/tinymce.min.js"
-referrerpolicy="origin">
-    < script >
-        $(document).ready(function() {
-            // Javascript method's body can be found in assets/js/demos.js
-            demo.initDashboardPageCharts();
+referrerpolicy="origin"></script>
+<script>
+    $(document).ready(function() {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
 
-        });
+    });
 </script>
