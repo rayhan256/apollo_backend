@@ -88,7 +88,12 @@ class PortfolioController extends Controller
         }
     }
 
-  
+    public function destroyImage($id) {
+        $gallery = PortfolioImage::find($id);
+        $gallery->delete();
+        return redirect()->back()->with('pesan', 'Portfolio Deleted');
+    }
+
     public function destroy($id)
     {
         //

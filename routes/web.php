@@ -45,6 +45,7 @@ Route::prefix('cms')->middleware(['auth', 'verified'])->group(function () {
     Route::post('/portfolios/create', [PortfolioController::class, 'store']);
     Route::get('/portfolios/{id}', [PortfolioController::class, 'viewPortfolio']);
     Route::post('/portfolios/addImage', [PortfolioController::class, 'addImage']);
+    Route::get('/portfolios/destroyImage/{id}', [PortfolioController::class, 'destroyImage']);
     Route::get('/portfolios/destroy/{id}', [PortfolioController::class, 'destroy']);
 
     //profile

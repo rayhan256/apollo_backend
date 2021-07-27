@@ -17,8 +17,13 @@
                     </div>
                     <div class="row my-3">
                         @foreach ($data->images as $item)
-                            <div class="col-md-3">
-                                <img src="data:image/jpeg;base64, {{ $item->image }}" class="img-fluid">
+                            <div class="col-md-3 gallery-wrapper">
+                                <a href="/cms/portfolios/destroyImage/{{ $item->id }}"
+                                    class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral btn-sm delete-btn"
+                                    data-original-title="Remove" aria-disabled="true">
+                                    <i class="now-ui-icons ui-1_simple-remove"></i>
+                                </a>
+                                <img src="data:image/jpeg;base64, {{ $item->image }}" class="img-fluid portfolio-image">
                             </div>
                         @endforeach
                     </div>

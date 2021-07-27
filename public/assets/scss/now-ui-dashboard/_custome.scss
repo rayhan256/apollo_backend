@@ -1,0 +1,17 @@
+.gallery-wrapper {
+    position: relative;
+   
+    .delete-btn {
+        position: absolute;
+        z-index: 2;
+        right: 20px;
+
+        &:hover {
+            background-color: red;
+        }
+    }
+
+    .portfolio-image {
+         filter: brightness(70%);
+    }
+}
