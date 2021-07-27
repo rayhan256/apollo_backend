@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,6 +46,10 @@ Route::prefix('cms')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/portfolios/{id}', [PortfolioController::class, 'viewPortfolio']);
     Route::post('/portfolios/addImage', [PortfolioController::class, 'addImage']);
     Route::get('/portfolios/destroy/{id}', [PortfolioController::class, 'destroy']);
+
+    //profile
+    Route::get('/profiles', [ProfileController::class, 'index']);
+    Route::post('/profiles/update', [ProfileController::class, 'update']);
 
     //logout
     Route::get('/logout', [DashboardController::class, 'signout']);

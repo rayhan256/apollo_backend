@@ -40,7 +40,7 @@ $user = Auth::user();
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="/cms/logout">Logout</a>
-                        <a class="dropdown-item" href="#">See Profile</a>
+                        <a class="dropdown-item" href="/cms/profiles">See Profile</a>
                     </div>
                 </li>
             </ul>
